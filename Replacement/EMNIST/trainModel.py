@@ -36,3 +36,9 @@ for k in range(0,10):
         accuracy.append(acc)
 print('Retraining the model accuracy')
 print(accuracy)
+with open("outputSequenceTrain.txt", "w") as txt_file:
+    for line in module:
+        txt_file.write(" ".join(str(line)) + "\n")
+with open("outputAccTrain.txt", "w") as txt_file:
+    for line in accuracy:
+        txt_file.write(str(line) + "\n")

@@ -29,7 +29,7 @@ for k in range(0,10):
         #print("class1a: "+str(class1))
         class1=k
         #class2=j
-        #print("class1: "+str(class1))
+        #print("class1: "+str(class1))      
         if(class1==0):
             module0=load_model('MNISTReplacedBy/module0.h5')
             module1=load_model('MNISTReplace/module1.h5')
@@ -229,7 +229,7 @@ for k in range(0,10):
                 maxPrediction.append(pred8[0][8])
                 maxPrediction.append(pred9[0][9])
                 finalPred.append(maxPrediction.index(max(maxPrediction)))
-             # More than one vote
+             # More than one vote   
             elif (pred.count(10)<9):
                 maxPrediction=[]
                 maxPrediction.append(pred0[0][0])
@@ -248,12 +248,12 @@ for k in range(0,10):
                     if(i!=10):
                         valPred.append(maxPrediction[i])
                         #argPred.append(i)
-                finalPred.append(maxPrediction.index(max(valPred)) )
+                finalPred.append(maxPrediction.index(max(valPred)) )     
             #Case 3: One vote
             elif(pred.count(10)==9):
                 for i in pred:
                     if(i!=10):
-                       finalPred.append(i)
+                       finalPred.append(i) 
         #In[]
         from sklearn.metrics import accuracy_score
         score = accuracy_score(finalPred,yt)
@@ -262,11 +262,11 @@ for k in range(0,10):
         module.append([class1,class2])
         #print("class1: "+str(class1))
         accuracy.append(score)
+print('Replacing the modules accuracy')
+print(accuracy)
 with open("outputSequence.txt", "w") as txt_file:
     for line in module:
         txt_file.write(" ".join(str(line)) + "\n")
 with open("outputAcc.txt", "w") as txt_file:
     for line in accuracy:
         txt_file.write(str(line) + "\n")
-print('Replacing the modules accuracy')
-print(accuracy)

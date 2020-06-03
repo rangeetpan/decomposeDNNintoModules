@@ -264,3 +264,9 @@ for k in range(0,10):
         accuracy.append(score)
 print('Replacing the modules accuracy')
 print(accuracy)
+with open("outputSequence.txt", "w") as txt_file:
+    for line in module:
+        txt_file.write(" ".join(str(line)) + "\n")
+with open("outputAcc.txt", "w") as txt_file:
+    for line in accuracy:
+        txt_file.write(str(line) + "\n")

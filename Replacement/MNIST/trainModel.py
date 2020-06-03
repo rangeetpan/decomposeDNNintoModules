@@ -34,5 +34,17 @@ for k in range(0,10):
         acc=np.mean(np.equal(acc, yt))
         module.append([class1, class2])
         accuracy.append(acc)
+with open("outputSequenceTrain.txt", "w") as txt_file:
+    for line in module:
+        txt_file.write(" ".join(str(line)) + "\n")
+with open("outputAccTrain.txt", "w") as txt_file:
+    for line in accuracy:
+        txt_file.write(str(line) + "\n")
 print('Retraining the model accuracy')
 print(accuracy)
+with open("outputSequenceTrain.txt", "w") as txt_file:
+    for line in module:
+        txt_file.write(" ".join(str(line)) + "\n")
+with open("outputAccTrain.txt", "w") as txt_file:
+    for line in accuracy:
+        txt_file.write(str(line) + "\n")
