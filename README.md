@@ -18,4 +18,4 @@ For more information, please see [Contact.md](./CONTACT.md)
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.md) file for details.
 
 ## DOI
-[![DOI](https://zenodo.org/badge/235641090.svg)](https://zenodo.org/badge/latestdoi/235641090)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3874077.svg)](https://doi.org/10.5281/zenodo.3874077)
