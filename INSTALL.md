@@ -3,12 +3,12 @@ The source codes and the results are placed in this repository.
 - The source codes are categorized based on the experimental setup. We have proposed six different approaches to decompose a deep neural network (DNN) into modules. The source code of each technique has been carefully placed under the corresponding folder. For example, for `Tangling Identification: Imbalance (TI-I)`, the code is in `Approach 1 (TI-I)`. Within each folder, there are codes for all the datasets, MNIST, EMNIST, FMNIST, and KMNIST. Since, for each dataset, we have used four different structure of the handmade models, e.g., for MNIST, MNIST-1, MNIST-2, MNIST-3, and MNIST-4. A detailed description of the setup can be found in the paper. For each model and dataset, there is a folder with the source code. For experiments with MNIST-1, the source code can be found under `<approach>\MNIST\MNIST-1`. For each such experiment, we have the trained model and the decomposed modules saved in .h5 format. Since the training and decomposing takes significant time, the trained model and the modules can be reused by simply using the corresponding files. For example, MNIST-1 has one file mnist.h5, which the trained model and module0, module1, ..., module9, which are the decomposed modules from the DNN model. To validate the result, one can use the scripts given in the `Scripts` folder. Please use the [requirements](./requirements.txt) to sync with the correct version of the library to execute the code. 
 - For installing the requirements, use
   `pip install requirements`
-- For reusing the code related to the Table 1 in the paper, please use the `Table1.sh` script. For intra and inter reuse and replacement related results, please use the `Table2-3-Reuse.sh` and `Table4-5-Replacement.sh` respectively.
+- For reusing the code related to Table 1 in the paper, please use the `Table1.sh` script. For intra and inter reuse and replacement related results, please use the `Table2-3-Reuse.sh` and `Table4-5-Replacement.sh` respectively.
 - The experiments related to the [reuse](./Reuse) and the [replacement](./Replacement) are kept under the corresponding directory. To validate the results, one can either check the `Results.xlsx` or the .txt files provided in the folders, where `outputAcc` stores the accuracy of the reusing or replacing the decomposed modules, `outputAccTrain` stores the training accuracy, `outputSequence` stores the sequence in which the reuse/replacement have been done, and `outputSequenceTrain` stores the sequence in which training occurs. Scripts have been provided to validate the results; however, the training accuracy might change as every time a training occurs, the accuracy of a model cannot be exactly the same as the previous one. In the paper, we have reported an instance of the experiments, and the results from that instance have carefully stored in both .txt format and the .xlsx format.
 - The current python version is 3.7.1.
 ## Example 1: Composed Accuracy of the decomposed modules for MNIST with 1 hidden layer:
 - Step 1: Go to the `Scripts` folder.
-- Step 2: Execute `./Table1.sh` on the terminal. It give you the below options.
+- Step 2: Execute `./Table1.sh` on the terminal. It gives you the below options.
 ```
 (base) user$ ./Table1.sh
 Please choose the correct option for the experiment
@@ -44,7 +44,7 @@ Model Accuracy: 0.9491
 ```
 ## Example 2: MNIST Intra Reuse:
 - Step 1: Go to the `Scripts` folder.
-- Step 2: Execute `./Table2-3-Reuse.sh` on the terminal. It give you the below options.
+- Step 2: Execute `./Table2-3-Reuse.sh` on the terminal. It gives you the below options.
 ```
 (base) user$ ./Table2-3-Reuse.sh
 Please choose the correct option for the experiment
@@ -56,7 +56,7 @@ Please choose the correct option for the experiment
 6- MNIST-KMNIST Inter Reuse
 ```
 Once you choose the right option, e.g., `1` for our example, the code will execute for some minutes. At the end of the execution, the accuracy of the modules and the source model will be reported in four files in `Reuse\MNIST` folder.
-Detailed description of each has been given in the above discussion.
+A detailed description of each has been given in the above discussion.
 
 ## Example 3: MNIST Intra Replacement:
 - Step 1: Go to the `Scripts` folder.
@@ -73,4 +73,4 @@ Please choose the correct option for the experiment
 6- MNIST-KMNIST Inter Reuse
 ```
 Once you choose the right option, e.g., `1` for our example, the code will execute for some minutes. At the end of the execution, the accuracy of the modules and the source model will be reported in four files in `Replacement\MNIST` folder.
-Detailed description of each has been given in the above discussion.
+A detailed description of each has been given in the above discussion.
