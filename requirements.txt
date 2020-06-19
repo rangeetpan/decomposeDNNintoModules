@@ -2,5 +2,8 @@ keras == 2.2.4
 numpy == 1.15.4
 sklearn == 0.20.1
 tensorflow == 1.13.1
-
-       
+matplotlib == 3.0.2
+skimage == 0.14.1
+graphviz == 0.10.1
+mpmath == 1.1.0
+pytest == 4.0.2       
