@@ -17,5 +17,8 @@ For more information, please see [Contact.md](./CONTACT.md)
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.md) file for details.
 
+## Note
+Results are excepted to be different compared to that presented in the paper.
+
 ## DOI
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3874077.svg)](https://doi.org/10.5281/zenodo.3874077)
